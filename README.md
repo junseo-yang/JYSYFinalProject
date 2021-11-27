@@ -1,2 +1,7 @@
 # JYSYFinalProject
-Final Project: Monogame / PROG2370 - Game Programming with Data Structures
+
+PROG2370 - Game Programming with Data Structures Final Project
+
+Dev envrionment: Monogame
+
+Team: Junseo Yang, Seongjo Yun
