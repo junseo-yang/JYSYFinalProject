@@ -10,10 +10,14 @@ namespace JYSYFinalProject
 
         public SpriteBatch _spriteBatch;
 
+        /* Scene */
         private StartScene startScene;
         private HelpScene helpScene;
         private ActionScene actionScene;
         public const int QUIT = 4;
+
+        /* Character */
+        private Character character;
 
         public Game1()
         {
@@ -25,6 +29,7 @@ namespace JYSYFinalProject
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+
             Shared.stage = new Vector2(_graphics.PreferredBackBufferWidth,
                 _graphics.PreferredBackBufferHeight);
 
@@ -35,6 +40,9 @@ namespace JYSYFinalProject
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            // TODO: use this.Content to load your game content here
+
+            /* Scene */
             startScene = new StartScene(this);
             this.Components.Add(startScene);
 
@@ -45,7 +53,11 @@ namespace JYSYFinalProject
             this.Components.Add(actionScene);
 
             startScene.show();
-            // TODO: use this.Content to load your game content here
+
+            /* Character */
+            Vector2 position = new Vector2(Shared.stage.X / 2, Shared.stage.Y / 2);
+            character = new Character(this, position, 3);
+            actionScene.SceneComponents.Add(character);
         }
 
 
@@ -94,7 +106,6 @@ namespace JYSYFinalProject
                     startScene.show();
                 }
             }
-
 
             base.Update(gameTime);
         }

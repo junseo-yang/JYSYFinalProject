@@ -9,7 +9,7 @@ namespace JYSYFinalProject
 {
     public abstract class GameScene : DrawableGameComponent
     {
-        public List<GameComponent> Components { get; set; }
+        public List<GameComponent> SceneComponents { get; set; }
 
         public virtual void show()
         {
@@ -24,13 +24,13 @@ namespace JYSYFinalProject
 
         public GameScene(Game game) : base(game)
         {
-            Components = new List<GameComponent>();
+            SceneComponents = new List<GameComponent>();
             hide();
         }
         public override void Draw(GameTime gameTime)
         {
             DrawableGameComponent comp = null;
-            foreach(GameComponent item in Components)
+            foreach(GameComponent item in SceneComponents)
             {
                 if(item is DrawableGameComponent)
                 {
@@ -48,7 +48,7 @@ namespace JYSYFinalProject
 
         public override void Update(GameTime gameTime)
         {
-            foreach(GameComponent item in Components)
+            foreach(GameComponent item in SceneComponents)
             {
                 if(item.Enabled)
                 {
