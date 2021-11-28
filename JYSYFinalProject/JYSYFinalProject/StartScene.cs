@@ -24,7 +24,7 @@ namespace JYSYFinalProject
             SpriteFont hilightFont = g.Content.Load<SpriteFont>("fonts/hilightFont");
 
             menu = new MenuComponent(g, spriteBatch, regularFont, hilightFont, menuItems);
-            this.Components.Add(menu);
+            this.SceneComponents.Add(menu);
 
         }
     }
