@@ -23,6 +23,9 @@ namespace JYSYFinalProject
 
         private const int COL = 4;
 
+        private int timeCounter = 0;
+        private int existTime = 300;
+
         public Tornado(Game game,
             SpriteBatch spriteBatch,
             Texture2D tex,
@@ -80,6 +83,15 @@ namespace JYSYFinalProject
             {
                 frameIndexCol = 0;
             }
+
+            if (timeCounter >= existTime)
+            {
+                this.Enabled = false;
+                this.Visible = false;
+            }
+            timeCounter++;
+
+
             base.Update(gameTime);
         }
     }

@@ -74,7 +74,7 @@ namespace JYSYFinalProject
             {
                 Fireball fireball = new Fireball(this.Game, spriteBatch, this.Game.Content.Load<Texture2D>("images/Fireball"), bow.position);
                 this.SceneComponents.Add(fireball);
-                fireballCooltime = 300;
+                fireballCooltime = 200;
                 fireballSound.Play();
             }
 
