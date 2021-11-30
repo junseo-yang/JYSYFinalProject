@@ -18,7 +18,7 @@ namespace JYSYFinalProject
         // list of srcRect
         private Rectangle[,] frames;
         // draw frame index, list has indexer
-        private int frameIndexRow = -1;
+        public int frameIndexRow = -1;
         private int frameIndexCol = -1;
 
         // fixed delay
@@ -80,7 +80,18 @@ namespace JYSYFinalProject
             // Safety Condition
             if (frameIndexRow >= 0)
             {
-                spriteBatch.Draw(tex, position, frames[frameIndexRow, frameIndexCol], Color.White);
+                if (frameIndexCol >= 0)
+                {
+                    spriteBatch.Draw(tex, position, frames[frameIndexRow, frameIndexCol], Color.White);
+                }
+                else
+                {
+                    spriteBatch.Draw(tex, position, frames[frameIndexRow, 0], Color.White);
+                }
+            }
+            else
+            {
+                spriteBatch.Draw(tex, position, frames[(int)Direction.Up, 0], Color.White);
             }
             spriteBatch.End();
 
@@ -122,6 +133,10 @@ namespace JYSYFinalProject
             if (ks.IsKeyDown(Keys.Left) && ks.IsKeyUp(Keys.Up) && ks.IsKeyUp(Keys.Right) && ks.IsKeyUp(Keys.Down))
             {
                 frameIndexRow = (int)Direction.Left;
+            }
+            if (ks.IsKeyUp(Keys.Left) && ks.IsKeyUp(Keys.Up) && ks.IsKeyUp(Keys.Right) && ks.IsKeyUp(Keys.Down))
+            {
+                frameIndexCol = -1;
             }
 
             // Increase delayCounter

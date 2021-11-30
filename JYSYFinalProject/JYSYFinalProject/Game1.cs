@@ -16,12 +16,12 @@ namespace JYSYFinalProject
         private ActionScene actionScene;
         public const int QUIT = 4;
 
-        /* Character */
-        private Character character;
 
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
+            _graphics.PreferredBackBufferWidth = 1000;
+            _graphics.PreferredBackBufferHeight = 500;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
         }
@@ -54,10 +54,6 @@ namespace JYSYFinalProject
 
             startScene.show();
 
-            /* Character */
-            Vector2 position = new Vector2(Shared.stage.X / 2, Shared.stage.Y / 2);
-            character = new Character(this, position, 3);
-            actionScene.SceneComponents.Add(character);
         }
 
 
