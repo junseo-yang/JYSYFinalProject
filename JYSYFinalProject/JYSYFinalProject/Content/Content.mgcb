@@ -63,7 +63,7 @@
 /processorParam:TextureFormat=Color
 /build:images/Castle.png
 
-#begin images/Character/Character_8_directional.png
+#begin images/Enemy/01Wolf.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -73,7 +73,19 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:images/Character/Character_8_directional.png
+/build:images/Enemy/01Wolf.png
+
+#begin images/Enemy/02RedBat.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:images/Enemy/02RedBat.png
 
 #begin images/Fireball.png
 /importer:TextureImporter
