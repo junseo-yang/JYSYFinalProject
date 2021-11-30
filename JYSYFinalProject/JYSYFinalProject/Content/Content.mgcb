@@ -111,3 +111,21 @@
 /processorParam:TextureFormat=Color
 /build:images/Tornado.png
 
+#begin sound/FireballSound.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:sound/FireballSound.wav
+
+#begin sound/Shoot.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:sound/Shoot.wav
+
+#begin sound/WindSound.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:sound/WindSound.wav
+

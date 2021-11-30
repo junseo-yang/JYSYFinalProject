@@ -88,14 +88,12 @@ namespace JYSYFinalProject
             if (xDiff < 0)
             {
                 rotation = (float)Math.Atan(yDiff / xDiff) + (float)Math.PI + (float)Math.PI / 2;
-                if (ms.LeftButton == ButtonState.Pressed && oldMouseState.LeftButton == ButtonState.Released)
+                if (ms.LeftButton == ButtonState.Pressed && oldMouseState.LeftButton == ButtonState.Released && frameIndexCol == 0)
                 {
-                    if (frameIndexCol == 0)
-                    {
                         frameIndexCol++;
-                    }
                 }
             }
+
             if (frameIndexCol != 0)
             {
                 if (delayCounter >= delay)
